@@ -187,6 +187,17 @@ input[type="number"] {
   line-height: normal;
 }
 
+/*3. Tenha um elemento HTML na página (por exemplo, um parágrafo) e utilize JavaScript para modificar seu conteúdo usando a propriedade textContent.
+.botao-modificar {
+  background: var(--Light-Blue, #e89f18);
+  box-shadow: 0px 0px 20px 0px rgba(173, 24, 232, 0.5);
+
+  color: var(--Branco, #FFF);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: normal;
+}*/
+
 .carrinho {
   display: flex;
   width: 24rem;

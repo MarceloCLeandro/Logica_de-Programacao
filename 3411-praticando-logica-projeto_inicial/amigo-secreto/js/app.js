@@ -2,6 +2,16 @@ let listaSorteio = [];
 
 function adicionar() {
     let amigo = document.getElementById('nome-amigo');
+    if (amigo.value == '') {
+        alert('Insira um nome!');
+        return;
+    }
+
+    if (listaSorteio.includes(amigo.value)) {
+        alert('Este nome já foi adicionado. Por favor insira um complemento ou apelido');
+        return
+    }
+
     let lista = document.getElementById('lista-amigos');
     listaSorteio.push(amigo.value);
     if (lista.textContent == '') {
@@ -17,6 +27,11 @@ function adicionar() {
 }
 
 function sortear() {
+    if (listaSorteio.length < 4) {
+        alert('O minímo para a brincadeira é 4 amigos');
+        return
+    }
+
     embaralhar(listaSorteio);
 
     let sorteio = document.getElementById('lista-sorteio');
@@ -152,9 +167,8 @@ console.log("Embaralhando a Lista:", novaLista);
 
 function removerDuplicatas(array) {
     return [...new Set(array)];
-  }
-  
-  // Testando a função com novaLista
-  let novaListaSemDuplicatas = removerDuplicatas(novaLista);
-  console.log("Remover duplicatas:", novaListaSemDuplicatas);
-  
+}
+
+// Testando a função com novaLista
+let novaListaSemDuplicatas = removerDuplicatas(novaLista);
+console.log("Remover duplicatas:", novaListaSemDuplicatas);
